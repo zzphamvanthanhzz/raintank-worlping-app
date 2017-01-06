@@ -8,13 +8,13 @@
           <!-- Monitoring -->
           <i class="icon-gf icon-gf-monitoring-tiny" style="font-size:17px; vertical-align: text-bottom;" ng-show="ctrl.checks['https'].enabled"></i>
           <span class="freqMsg" ng-show="ctrl.checks['https'].enabled" > Every {{ctrl.checks['https'].frequency}}s from {{ctrl.probeCount(ctrl.checks['https'])}} {{ctrl.probeCount(ctrl.checks['https']) == 1 ? "Probe" : "Probes"}} |</span>
-          <i class="icon-gf icon-gf-monitoring-tiny" style="font-size:17px; vertical-align: text-bottom;"ng-show="!ctrl.checks['dns'].enabled"></i>
+          <i class="icon-gf icon-gf-monitoring-tiny" style="font-size:17px; vertical-align: text-bottom;"ng-show="!ctrl.checks['https'].enabled"></i>
           <span class="freqMsg disabled" ng-show="!ctrl.checks['https'].enabled" > Not enabled |</span>
           <span class="freqMsg" ng-show="!ctrl.checks['https'].enabled && ctrl.discovered" > Not Discovered |</span>
           <!-- Checks -->
-          <i ng-show="ctrl.checks['https'].enabled" class="icon-gf icon-gf-status" style="font-size:17px; vertical-align: sub;"></i>
-          <span ng-show="ctrl.checks['https'].enabled" class="freqMsg" bs-tooltip="'Estimated checks per month, in Millions'">{{ctrl.totalChecks(ctrl.checks['https'])| number:1}}M/mo</span><span ng-show="ctrl.checks['https'].enabled" class="freqMsg"> |</span
-          <!-- Configure -->
+<!--      <i ng-show="ctrl.checks['https'].enabled" class="icon-gf icon-gf-status" style="font-size:17px; vertical-align: sub;"></i>
+          <span ng-show="ctrl.checks['https'].enabled" class="freqMsg" bs-tooltip="'Estimated checks per month, in Millions'">{{ctrl.totalChecks(ctrl.checks['https'])| number:1}}M/mo</span> <span ng-show="ctrl.checks['https'].enabled" class="freqMsg"> |</span> -->
+          <!-- Configure --> 
           <span class="highlight-word"> Configure</span>
           <span><i class="fa fa-caret-down" ng-show="ctrl.showHTTPS"></i></span>
           <span><i class="fa fa-caret-right rt-box-accordian-control" ng-hide="ctrl.showHTTPS"></i></span>
