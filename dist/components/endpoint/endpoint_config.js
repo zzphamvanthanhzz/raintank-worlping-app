@@ -59,6 +59,40 @@ System.register(['lodash', 'angular'], function (_export, _context) {
         };
         check.frequency = 120;
         break;
+      case "static":
+        check.type = "static";
+        check.settings = {
+          host:    "",
+          method:  "GET",
+          headers: "User-Agent: Mozilla/5.0\nAccept-Encoding: gzip\n",
+          timeout: 5,
+          total:   5,
+          getall:  true,
+        };
+        check.frequency = 120;
+        break;
+      case "clink":
+        check.type = "clink";
+        check.settings = {
+          host:    "",
+          method:  "GET",
+          headers: "User-Agent: Mozilla/5.0\nAccept-Encoding: gzip\n",
+          timeout: 5,
+          total:   5,
+          getall:  true,
+        };
+        check.frequency = 1800;
+        break;   
+      case "cdnintegrity":
+        check.type = "cdnintegrity";
+        check.settings = {
+        host:      "",
+        headers:   "User-Agent: Mozilla/5.0\nAccept-Encoding: gzip\n",
+        numfile:   5,
+        chunksize: 3145728,
+        };
+        check.frequency = 1800;
+        break;               
     }
     return check;
   }
@@ -265,6 +299,7 @@ System.register(['lodash', 'angular'], function (_export, _context) {
         }, {
           key: 'getProbes',
           value: function getProbes() {
+            console.log("getProbes")
             var self = this;
             return this.backendSrv.get('api/plugin-proxy/raintank-worldping-app/api/v2/probes').then(function (resp) {
               if (resp.meta.code !== 200) {
@@ -272,6 +307,7 @@ System.register(['lodash', 'angular'], function (_export, _context) {
                 return self.$q.reject(resp.meta.message);
               }
               self.probes = resp.body;
+              console.log(self.probes)
               _.forEach(self.probes, function (probe) {
                 _.forEach(probe.tags, function (t) {
                   if (!(t in self.probesByTag)) {
@@ -305,6 +341,12 @@ System.register(['lodash', 'angular'], function (_export, _context) {
         }, {
           key: 'getProbesForCheck',
           value: function getProbesForCheck(check) {
+            console.log("getProbesForCheck");
+            if (check.route == null){
+              // this.alertSrv("check don't have routing type.", "unknown route type.", "error", 5000);
+              console.log("check route is null")
+              return [];
+            }
             if (check.route.type === "byIds") {
               return check.route.config.ids;
             } else if (check.route.type === "byTags") {

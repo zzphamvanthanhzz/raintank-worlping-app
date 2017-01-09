@@ -127,10 +127,12 @@
     </div>
 
     <div ng-if="ctrl.pageReady && (ctrl.showConfig || ctrl.endpoint.id || ctrl.discoveryError)">
-<!--       <div ng-include src="'public/plugins/raintank-worldping-app/components/endpoint/partials/dnsForm.html'"></div>
-      <div ng-include src="'public/plugins/raintank-worldping-app/components/endpoint/partials/pingForm.html'"></div> -->
+      <div ng-include src="'public/plugins/raintank-worldping-app/components/endpoint/partials/staticForm.html'"></div>
+      <div ng-include src="'public/plugins/raintank-worldping-app/components/endpoint/partials/clinkForm.html'"></div>
+      <div ng-include src="'public/plugins/raintank-worldping-app/components/endpoint/partials/tcpForm.html'"></div>
       <div ng-include src="'public/plugins/raintank-worldping-app/components/endpoint/partials/httpForm.html'"></div>
       <div ng-include src="'public/plugins/raintank-worldping-app/components/endpoint/partials/httpsForm.html'"></div>
+      <div ng-include src="'public/plugins/raintank-worldping-app/components/endpoint/partials/cdnintegrityForm.html'"></div>      
     </div>
   </form>
   <div ng-show="ctrl.endpoint.id" ng-include src="'public/plugins/raintank-worldping-app/components/endpoint/partials/destroyForm.html'"></div>

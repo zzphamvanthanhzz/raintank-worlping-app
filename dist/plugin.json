@@ -7,21 +7,21 @@
     {
       "path": "api/graphite/*",
       "method": "*",
-      "url": "http://mw.qos.zapps.vn/graphite",
+      "url": "http://localhost:81/graphite",
       "reqSignedIn": true,
       "reqRole": "Viewer",
       "headers": [
-        { "name": "Authorization", "content": "Bearer {{.SecureJsonData.apiKey}}"}
+        { "name": "Authorization", "content": "Bearer 123456@A:1"}
       ]
     },
     {
       "path": "api/elasticsearch/*",
       "method": "*",
-      "url": "http://mw.qos.zapps.vnelasticsearch",
+      "url": "http://localhost:81/elasticsearch",
       "reqSignedIn": true,
       "reqRole": "Viewer",
       "headers": [
-        { "name": "Authorization", "content": "Bearer {{.SecureJsonData.apiKey}}"}
+        { "name": "Authorization", "content": "Bearer 123456@A:1"}
       ]
     },
     {
@@ -37,11 +37,11 @@
     {
       "path": "api/*",
       "method": "PUT,POST,DELETE",
-      "url": "https://worldping-api.raintank.io/api",
+      "url": "http://localhost:3000/api",
       "reqSignedIn": true,
       "reqRole": "Editor",
       "headers": [
-        { "name": "Authorization", "content": "Bearer {{.SecureJsonData.apiKey}}"}
+        { "name": "Authorization", "content": "Bearer 123456@A:1"}
       ]
     },
     {
