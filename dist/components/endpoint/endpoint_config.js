@@ -155,7 +155,7 @@ System.register(['lodash', 'angular'], function (_export, _context) {
           self.insufficientQuota = false;
 
           this.frequencyOpts = [];
-          var freqOpt = [10, 30, 60, 120];
+          var freqOpt = [60, 1800];
           _.forEach(freqOpt, function (f) {
             self.frequencyOpts.push({ value: f, label: "Every " + f + "s" });
           });

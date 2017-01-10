@@ -55,15 +55,13 @@
               <input class="gf-form-input max-width-21" type="text" ng-model="ctrl.checks['tcp'].settings.product" placeholder="NEWS">
             </div>
             <div class="gf-form">
-              <label class="gf-form-label width-9">Total Link</label>
-              <input class="gf-form-input max-width-21" type="text" ng-model="ctrl.checks['tcp'].settings.total" placeholder=5>
-            </div>    
+              <label class="gf-form-label width-9">IP</label>
+              <input class="gf-form-input max-width-21" type="text" ng-model="ctrl.checks['tcp'].settings.ip" placeholder="120.138.60.10">
+            </div>
             <div class="gf-form">
-              <label class="gf-form-label width-9">Method</label>
-              <div class="gf-form-select-wrapper">
-                <select class="gf-form-input gf-size-auto" ng-model="ctrl.checks['https'].settings.method" ng-options="m for m in ['GET', 'PUT', 'POST', 'DELETE', 'HEAD', 'PATCH']"></select>
-              </div>
-            </div>                    
+              <label class="gf-form-label width-9">Port</label>
+              <input class="gf-form-input max-width-21" type="text" ng-model="ctrl.checks['tcp'].settings.port" placeholder="443">
+            </div>                      
             <div class="gf-form">
               <label class="gf-form-label width-9">Timeout (s)</label>
               <input class="gf-form-input max-width-5" type="number" ng-model="ctrl.checks['tcp'].settings.timeout" min="1" max="10">
