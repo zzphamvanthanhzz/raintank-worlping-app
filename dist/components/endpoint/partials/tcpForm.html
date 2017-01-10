@@ -32,7 +32,7 @@
           <editor-checkbox text="Enabled" model="ctrl.checks['tcp'].enabled"></editor-checkbox>
         </div>
         <div class="endpoint-config-left-margin">
-          <p>At the selected <span class="emphasis-word">frequency</span>, we'll do a <span class="emphasis-word">single</span> TCP request to your <span class="emphasis-word">URL</span>, from each probe within your <span class="emphasis-word">dynamic or static footprint</span>.</p>
+<!--           <p>At the selected <span class="emphasis-word">frequency</span>, we'll do a <span class="emphasis-word">single</span> TCP request to your <span class="emphasis-word">URL</span>, from each probe within your <span class="emphasis-word">dynamic or static footprint</span>.</p> -->
           <div class="gf-form-group">
             <div class="gf-form">
               <label class="gf-form-label width-9">Frequency</label>
@@ -60,7 +60,7 @@
             </div>
             <div class="gf-form">
               <label class="gf-form-label width-9">Port</label>
-              <input class="gf-form-input max-width-21" type="text" ng-model="ctrl.checks['tcp'].settings.port" placeholder="443">
+              <input class="gf-form-input max-width-21" type="number" ng-model="ctrl.checks['tcp'].settings.port" placeholder="443">
             </div>                      
             <div class="gf-form">
               <label class="gf-form-label width-9">Timeout (s)</label>

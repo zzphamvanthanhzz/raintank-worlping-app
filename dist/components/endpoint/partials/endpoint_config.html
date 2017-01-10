@@ -18,7 +18,7 @@
       <bootstrap-tagsinput ng-model="ctrl.endpoint.tags" tagclass="label rt-label-tag" placeholder="New Tag" on-tags-updated="ctrl.tagsUpdated()" ></bootstrap-tagsinput>
       </div>
 
-    <div class="page-header-tabs">
+<!--     <div class="page-header-tabs">
       <ul class="gf-tabs">
         <li class="gf-tabs-item">
           <a class="gf-tabs-link" href="plugins/raintank-worldping-app/page/endpoint-details?endpoint={{ctrl.endpoint.id}}">
@@ -31,14 +31,14 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 
 
   <form name="endpointForm">
 
     <!-- Existing endpoint -->
-    <div class="gf-form-group" ng-if="ctrl.endpoint.id">
+<!--     <div class="gf-form-group" ng-if="ctrl.endpoint.id">
       <div class="gf-form-inline">
         <div class="gf-form gf-form--right-margin">
           <span class="gf-form-label width-7">Endpoint</span>
@@ -51,7 +51,7 @@
       <br>
       <div class="gf-form-buttons-row">
       </div>
-    </div>
+    </div> -->
 
     <!-- New endpoint -->
     <div class="gf-form-group" ng-if="!ctrl.endpoint.id  && ctrl.pageReady">
