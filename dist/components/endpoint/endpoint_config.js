@@ -625,7 +625,7 @@ System.register(['lodash', 'angular'], function (_export, _context) {
           value: function gotoDashboard(endpoint, type) {
             var self = this;
             if (!type) {
-              type = 'summary';
+              type = 'worldping-home';
             }
             var search = {
               "var-collector": "All",
@@ -633,24 +633,24 @@ System.register(['lodash', 'angular'], function (_export, _context) {
             };
             switch (type) {
               case "summary":
-                self.$location.path("/dashboard/db/worldping-endpoint-summary").search(search);
-                break;
+                // self.$location.path("/dashboard/db/worldping-endpoint-summary").search(search);
+                // break;
               case "ping":
-                self.$location.path("/dashboard/db/worldping-endpoint-ping").search(search);
-                break;
+                // self.$location.path("/dashboard/db/worldping-endpoint-ping").search(search);
+                // break;
               case "dns":
-                self.$location.path("/dashboard/db/worldping-endpoint-dns").search(search);
-                break;
+                // self.$location.path("/dashboard/db/worldping-endpoint-dns").search(search);
+                // break;
               case "http":
-                search['var-protocol'] = "http";
-                self.$location.path("/dashboard/db/worldping-endpoint-web").search(search);
-                break;
+                // search['var-protocol'] = "http";
+                // self.$location.path("/dashboard/db/worldping-endpoint-web").search(search);
+                // break;
               case "https":
-                search['var-protocol'] = "https";
-                self.$location.path("/dashboard/db/worldping-endpoint-web").search(search);
-                break;
+                // search['var-protocol'] = "https";
+                // self.$location.path("/dashboard/db/worldping-endpoint-web").search(search);
+                // break;
               default:
-                self.$location.path("/dashboard/db/worldping-endpoint-summary").search(search);
+                self.$location.path("/dashboard/db/worldping-home").search(search);
                 break;
             }
           }

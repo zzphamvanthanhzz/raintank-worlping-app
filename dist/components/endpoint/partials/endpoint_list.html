@@ -21,10 +21,10 @@
 			<i ng-class="icon" class="icon-gf icon-gf-endpoint no-endpoints"></i>
 			<p ng-if="ctrl.isOrgEditor">Looks like you don’t have any endpoints yet.<br>
 				<a class="highlight-word" href="plugins/raintank-worldping-app/page/endpoint-config">Add a new endpoint</a> or
-				<a class="highlight-word" href="dashboard/db/worldping-endpoint-summary?var-endpoint=~google_com_demo">view live demo data.</a>
+		<!-- 		<a class="highlight-word" href="dashboard/db/worldping-endpoint-summary?var-endpoint=~google_com_demo">view live demo data.</a> -->
 			</p>
 			<p ng-if="!ctrl.isOrgEditor">Your org does not have any endpoints.<br>In the meantime,
-				<a class="highlight-word" href="dashboard/db/worldping-endpoint-summary?var-endpoint=~google_com_demo">view some live demo data.</a>
+				<!-- <a class="highlight-word" href="dashboard/db/worldping-endpoint-summary?var-endpoint=~google_com_demo">view some live demo data.</a> -->
 			</p>
 		</div>
 		<a href="#" ng-click="ctrl.showEndpointDesc = !ctrl.showEndpointDesc">
@@ -70,9 +70,9 @@
 				<div class="card-item-body">
 					<div class="card-item-details">
 						<div class="card-item-name">
-							<a href="dashboard/db/worldping-endpoint-summary?&var-endpoint={{endpoint.slug}}&var-probe=All">
+					<!-- 		<a href="dashboard/db/worldping-endpoint-summary?&var-endpoint={{endpoint.slug}}&var-probe=All">
 								{{endpoint.name}}
-							</a>
+							</a> -->
 							<span ng-repeat="tag in endpoint.tags" tag-color-from-name="tag"  class="label label-tag">
 								{{tag}}
 							</span>

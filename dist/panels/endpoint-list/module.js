@@ -241,7 +241,8 @@ System.register(['../../filters/all', '../../directives/all', 'lodash', 'app/plu
         }, {
           key: 'gotoDashboard',
           value: function gotoDashboard(endpoint) {
-            this.$location.path("/dashboard/db/worldping-endpoint-summary").search({ "var-collector": "All", "var-endpoint": endpoint.slug });
+            // this.$location.path("/dashboard/db/worldping-endpoint-summary").search({ "var-collector": "All", "var-endpoint": endpoint.slug });
+            this.$location.path("/dashboard/db/worldping-home");
           }
         }, {
           key: 'gotoEndpointURL',
