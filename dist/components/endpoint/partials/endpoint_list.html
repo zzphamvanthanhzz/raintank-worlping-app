@@ -54,7 +54,7 @@
 				<span class="small"> of <span class="rt-list-links" ng-click="setTagFilter('')">{{ctrl.endpoints.length}} total</a></span>
 			</div>
 		</div>
-	</div>
+	</div> 
 </div>
 
 <section ng-if="ctrl.endpoints.length > 0" class="card-section card-list-layout-list" layout-mode>
@@ -70,7 +70,7 @@
 				<div class="card-item-body">
 					<div class="card-item-details">
 						<div class="card-item-name">
-							<a href="dashboard/db/worldping-endpoint-summary?&var-endpoint={{endpoint.slug}}&var-probe=All">
+							<a>
 								{{endpoint.name}}
 							</a>
 							<span ng-repeat="tag in endpoint.tags" tag-color-from-name="tag"  class="label label-tag">

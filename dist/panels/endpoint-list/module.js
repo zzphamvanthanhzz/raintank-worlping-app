@@ -210,7 +210,9 @@ System.register(['../../filters/all', '../../directives/all', 'lodash', 'app/plu
           key: 'monitorStateChangeStr',
           value: function monitorStateChangeStr(endpoint, type) {
             var check;
+            console.log("monitorStateChangeStr")
             _.forEach(endpoint.checks, function (c) {
+              console.log(c)
               if (c.type.toLowerCase() === type.toLowerCase()) {
                 check = c;
               }
