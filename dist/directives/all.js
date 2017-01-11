@@ -134,16 +134,16 @@ System.register(['angular', 'lodash'], function (_export, _context) {
             var selectedTags = [];
 
             scope.init = function () {
-              // if (scope.model.route.type === 'byIds') {
-              //   selectedIds = scope.model.route.config.ids;
-              //   scope.footprint = { value: "static" };
-              // } else {
-              //   selectedTags = scope.model.route.config.tags;
-              //   scope.footprint = { value: "dynamic" };
-              // }
-              // scope.error = false;
+              if (scope.model.route.type === 'byIds') {
+                selectedIds = scope.model.route.config.ids;
+                scope.footprint = { value: "static" };
+              } else {
+                selectedTags = scope.model.route.config.tags;
+                scope.footprint = { value: "dynamic" };
+              }
+              scope.error = false;
 
-              // scope.reset();
+              scope.reset();
             };
 
             scope.reset = function () {
