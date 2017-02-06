@@ -243,7 +243,8 @@ System.register(['../../filters/all', '../../directives/all', 'lodash', 'app/plu
         }, {
           key: 'gotoDashboard',
           value: function gotoDashboard(endpoint) {
-            this.$location.path("/dashboard/db/web-performance-v2").search({ "var-collector": "All", "var-endpoint": endpoint.slug, "var-product": endpoint.product });
+            console.log(endpoint)
+            this.$location.path("/dashboard/db/web-performance-v2").search({ "var-collector": "All", "var-endpoint": endpoint.slug, "var-product": endpoint.checks[0].settings.product });
             // this.$location.path("/dashboard/db/worldping-home");
           }
         }, {
