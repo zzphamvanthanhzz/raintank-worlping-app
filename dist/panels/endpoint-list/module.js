@@ -210,9 +210,9 @@ System.register(['../../filters/all', '../../directives/all', 'lodash', 'app/plu
           key: 'monitorStateChangeStr',
           value: function monitorStateChangeStr(endpoint, type) {
             var check;
-            console.log("monitorStateChangeStr")
+            // console.log("monitorStateChangeStr")
             _.forEach(endpoint.checks, function (c) {
-              console.log(c)
+              // console.log(c)
               if (c.type.toLowerCase() === type.toLowerCase()) {
                 check = c;
               }
@@ -243,8 +243,8 @@ System.register(['../../filters/all', '../../directives/all', 'lodash', 'app/plu
         }, {
           key: 'gotoDashboard',
           value: function gotoDashboard(endpoint) {
-            // this.$location.path("/dashboard/db/worldping-endpoint-summary").search({ "var-collector": "All", "var-endpoint": endpoint.slug });
-            this.$location.path("/dashboard/db/worldping-home");
+            this.$location.path("/dashboard/db/web-performance-v2").search({ "var-collector": "All", "var-endpoint": endpoint.slug, "var-product": endpoint.product });
+            // this.$location.path("/dashboard/db/worldping-home");
           }
         }, {
           key: 'gotoEndpointURL',
