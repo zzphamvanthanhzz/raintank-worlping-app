@@ -245,7 +245,7 @@ System.register(['../../filters/all', '../../directives/all', 'lodash', 'app/plu
           value: function gotoDashboard(endpoint) {
             console.log(endpoint)
             this.$location.path("/dashboard/db/qos-details").search({ "var-probe": "All", "var-endpoint": endpoint.slug, "var-product": endpoint.checks[0].settings.product });
-            // this.$location.path("/dashboard/db/worldping-home");
+            // this.$location.path("/dashboard/db/dashboard");
           }
         }, {
           key: 'gotoEndpointURL',

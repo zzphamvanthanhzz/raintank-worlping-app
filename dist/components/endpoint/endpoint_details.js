@@ -213,7 +213,7 @@ System.register(["lodash"], function (_export, _context) {
           key: "gotoDashboard",
           value: function gotoDashboard(endpoint, type) {
             if (!type) {
-              type = 'worldping-home';
+              type = 'dashboard';
             }
             var search = {
               "var-probe": "All",
@@ -238,7 +238,7 @@ System.register(["lodash"], function (_export, _context) {
                 // this.$location.path("/dashboard/db/worldping-endpoint-web").search(search);
                 // break;
               default:
-                this.$location.path("/dashboard/db/worldping-home").search(search);
+                this.$location.path("/dashboard/db/dashboard").search(search);
                 break;
             }
           }

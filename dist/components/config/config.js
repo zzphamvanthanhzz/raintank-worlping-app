@@ -141,7 +141,7 @@ System.register(['./config.html!text', 'lodash'], function (_export, _context) {
             return this.validateKey().then(function () {
               return self.appEditCtrl.importDashboards().then(function () {
                 return {
-                  url: "dashboard/db/worldping-home",
+                  url: "dashboard/db/dashboard",
                   message: "worldPing app installed!"
                 };
               });

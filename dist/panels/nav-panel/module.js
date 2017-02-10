@@ -200,7 +200,7 @@ System.register(['lodash', '../../filters/all', '../../directives/all', 'app/plu
           key: 'gotoDashboard',
           value: function gotoDashboard(endpoint, type) {
             if (!type) {
-              type = 'worldping-home';
+              type = 'dashboard';
             }
             var search = {
               "var-collector": "All",
@@ -225,7 +225,7 @@ System.register(['lodash', '../../filters/all', '../../directives/all', 'app/plu
                 // this.$location.path("/dashboard/db/worldping-endpoint-web").search(search);
                 // break;
               default:
-                this.$location.path("/dashboard/db/worldping-home").search(search);
+                this.$location.path("/dashboard/db/dashboard").search(search);
                 break;
             }
           }
